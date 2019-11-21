@@ -1,0 +1,61 @@
+<!-- <ng-container *ngIf="post">
+    <div [hidden]="!editing">
+        <mat-card>
+            <h2>
+                Editar Nota
+            </h2>
+            <mat-form-field>
+                <input matInput placeholder="Título" [(ngModel)]="post.title">
+            </mat-form-field>
+            <br> -->
+            <!-- <mat-form-field> -->
+                <!-- <textarea matInput placeholder="Escribe una Nota." [(ngModel)]="post.content" rows="10"></textarea> -->
+            <!-- <ckeditor [editor] = "Editor" [data] = "data" (ready)="onReady($event)"></ckeditor> -->
+            <!-- <ckeditor [editor]="Editor" [data]="data"></ckeditor> -->
+            <!-- <div class="centered">
+                <div class="row row-presence">
+                    <div #presenceList class='presence'></div>
+                </div>
+                <div class='row row-editor'>
+                    <ckeditor [editor]="Editor" (ready)="onReady($event)" [config]="editorConfig" [data]="data"></ckeditor>
+                   <ckeditor [editor]="Editor" [data]="data"></ckeditor> 
+                    <div #sidebar class='sidebar'></div> 
+                <</div> 
+             </div> -->
+            <!-- </mat-form-field> -->
+            <!-- <br>
+            <button mat-raised-button color="accent" (click)="updatePost()" [disabled]="!post.title || !post.content">Guardar</button>
+            <button mat-button (click)="editing=false">Cancelar</button>
+        </mat-card>
+    </div>
+    <div [hidden]="editing">
+        <mat-card>
+            <img src="{{post.image}}" alt="{{post.title}}">
+            <p>publicado por {{ post.author }} &bull; {{ post.published.toDate() | date: 'fullDate'}}</p>
+            <mat-card-content>
+                <h2>{{ post.title }}</h2>
+                {{ post.content }}
+            </mat-card-content>
+            <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
+                <button mat-icon-button (click)="editing=true">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="delete()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</ng-container> -->
+
+<main>
+	<div class="centered">
+		<div class="row row-presence">
+			<div #presenceList class='presence'></div>
+		</div>
+		<div class='row row-editor'>
+			<ckeditor [editor]="Editor" (ready)="onReady($event)" [config]="editorConfig" [data]="data1" ></ckeditor>
+			<div #sidebar class='sidebar' style="width: 30%;"></div>
+		</div>
+	</div>
+</main>

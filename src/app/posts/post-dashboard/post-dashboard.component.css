@@ -1,0 +1,103 @@
+section {
+    max-width: 700px;
+    margin: 2em auto; 
+}
+mat-form-field{
+    width: 100%;
+}
+img {
+    width: 100%
+}
+.row-editor>ckeditor>div:first-child {
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+.row-editor>ckeditor>div:first-child,
+.row-editor>ckeditor {
+  background: #fff;
+  width: 100%;
+  min-height: var(--ck-sample-editor-min-height);
+}
+
+.ck.ck-editor {
+  /* Because of sidebar `position: relative`, Edge is overriding the outline of a focused editor. */
+  position: relative;
+  z-index: 10;
+}
+
+.row-editor .image.image-style-side {
+  float: right;
+  width: 50%;
+}
+
+.row-editor .image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.centered {
+  /* Hide overlapping comments. */
+  overflow: hidden;
+  max-width: var(--ck-sample-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ck-sample-base-spacing);
+}
+
+.row {
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+	padding: 0 10px;
+	position: relative;
+	min-width: var(--ck-sample-sidebar-width);
+	font-size: 20px;
+	background: hsl(0, 0%, 98%);
+	border: 1px solid hsl(0, 0%, 77%);
+	border-left: 0;
+	border-top: 0;
+	overflow: hidden;
+	min-height: 100%;
+
+	/* #2733. Do not overlap the left border if the sidebar is longer than content. */
+	box-shadow: -1px 0 0 0 hsl(0, 0%, 77%);
+}
+
+.sidebar.narrow {
+	min-width: 60px;
+}
+
+.sidebar.hidden {
+	display: none;
+}
+
+.row-presence {
+	width: 100%;
+	border: 1px solid hsl(0, 0%, 77%);
+	border-bottom: 0;
+	background: hsl(0, 0%, 98%);
+	padding: var(--ck-spacing-small);
+
+	/* Make `border-bottom` as `box-shadow` to not overlap with the editor border. */
+	box-shadow: 0 1px 0 0 hsl(0, 0%, 77%);
+
+	/* Make `z-index` bigger than `.editor` to properly display tooltips. */
+	z-index: 20;
+}
+
+.presence .ck.ck-presence-list__counter {
+	order: 2;
+	margin-left: var(--ck-spacing-large)
+}
+
+.row-editor>div:first-child,
+/* Classic demo. */
+
+main .ck-editor[role='application'] .ck.ck-content {
+  background: #fff;
+  font-size: 1em;
+  line-height: 1.6em;
+  min-height: var(--ck-sample-editor-min-height);
+  padding: 1.5em 2em;
+}
